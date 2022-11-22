@@ -1,0 +1,4 @@
+name: DecaliumTweaks
+version: '${project.version}'
+main: johnstweaks.decaliumtweaks.DecaliumTweaks
+softdepend: [WorldGuard]
