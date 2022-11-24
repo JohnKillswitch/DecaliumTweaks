@@ -82,6 +82,26 @@ public interface MainConfiguration {
         @ConfKey("ArrowFire")
         @SubSection
         ArrowFire arrowFire();
+
+
+        interface AnvilRepair {
+            @AnnotationBasedSorter.Order(1)
+            @ConfDefault.DefaultBoolean(true)
+            @ConfKey("enabled")
+            Boolean enabled();
+
+            @ConfComments({
+                    "Should be bukkit material. You can find list of ",
+                    "materials here: https://helpch.at/docs/1.19.1/org/bukkit/Material.html"
+            })
+            @ConfDefault.DefaultString("IRON_BLOCK")
+            @ConfKey("repairMaterial")
+            String repairMaterial();
+        }
+        @ConfComments("Player can repair anvil by clicking it with certain item in hand")
+        @ConfKey("AnvilRepair")
+        @SubSection
+        AnvilRepair anvilRepair();
     }
     @ConfKey("Tweaks-Settings")
     @SubSection

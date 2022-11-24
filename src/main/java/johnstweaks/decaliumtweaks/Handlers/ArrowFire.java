@@ -71,7 +71,7 @@ public class ArrowFire implements Listener {
         }
 
         if (new Random().nextInt(100 / conf.getConfigData().tweaksSettings().createPath().grassToDirtChance())+1 == 1) {
-            if (firedBlock.getType().isAir()) {
+            if (firedBlock.getType().equals(Material.AIR)) {
                 firedBlock.setType(Material.FIRE);
                 Fire data = (Fire)firedBlock.getBlockData();
 
